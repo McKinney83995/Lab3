@@ -17,7 +17,7 @@ public class SampleBenchmark {
   @Timeout(time = 5, timeUnit = TimeUnit.SECONDS)
   public void sayHelloBenchmark(Blackhole bh) {
       Hofstadter hofstadter = new Hofstadter();
-      String output = hofstadter.gSequence(1);
+      int output = hofstadter.gSequence_Naive(1);
       bh.consume(output);
   }
 }
